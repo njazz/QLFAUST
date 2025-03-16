@@ -11,9 +11,10 @@
 			<key>QLSupportedContentTypes</key>
 			<array>
 				<string>com.grame.faust-dsp</string>
+				<string>com.grame.faust-lib</string>
 			</array>
 			<key>QLSupportsSearchableItems</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.quicklook.preview</string>
