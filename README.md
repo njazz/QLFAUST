@@ -14,6 +14,8 @@ QuickLook plugin for FAUST Programming Language
   - **Comments**: Both line (`//`) and block (`/* */`) comments.
 - **Monospaced font** for easy reading of Faust code.
 - Distinct color coding for each type of code element (e.g., keywords, strings, operators, comments).
+- SVG Display
+- DSP Preview [WIP]
 
 Current version: 0.0.1
 
@@ -24,8 +26,18 @@ macOS 12+
 - [ ] Add line numbering to the preview.
 - [ ] Refactor to support custom themes for syntax highlighting.
 - [ ] Improve performance when handling large Faust files.
-- [ ] libfaust integration
+- [x] libfaust integration
+- [ ] Automated build with library
+
+## Build
+
+Please note that this repository is missing 'libfaustllvm.a'
+- download current version for your platform (or multiple with lipo) and put in Faust-X.XX.X/lib folder
 
 ---
 FAUST Programming language:
 https://github.com/grame-cncm/faust
+
+---
+license: **MIT**  
+libfaust license: **LGPL 2.1**  

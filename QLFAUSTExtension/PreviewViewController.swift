@@ -1,41 +1,38 @@
-//
-//  PreviewViewController.swift
-//  FAUSTQuickLookPreview
-//
 //  Created by alex on 16/03/2025.
-//
 
 import Cocoa
 import Quartz
+import SwiftUI
 
 class PreviewViewController: NSViewController, QLPreviewingController {
-    
-    override var nibName: NSNib.Name? {
-        return NSNib.Name("PreviewViewController")
-    }
-
     override func loadView() {
-        super.loadView()
-        // Do any additional setup after loading the view.
-        
-        
+        // Create a basic NSView as the root view
+        view = NSView()
     }
-
-    /*
-    func preparePreviewOfSearchableItem(identifier: String, queryString: String?) async throws {
-        // Implement this method and set QLSupportsSearchableItems to YES in the Info.plist of the extension if you support CoreSpotlight.
-
-        // Perform any setup necessary in order to prepare the view.
-        // Quick Look will display a loading spinner until this returns.
-    }
-    */
 
     func preparePreviewOfFile(at url: URL) async throws {
-        // Add the supported content types to the QLSupportedContentTypes array in the Info.plist of the extension.
+        // Create the SwiftUI view
+        let swiftUIView = QLFAUSTView(fileURL: url)
+            .frame(minWidth: 100, idealWidth: .infinity, maxWidth: .infinity)
+            .frame(minHeight: 100, idealHeight: .infinity, maxHeight: .infinity)
 
-        // Perform any setup necessary in order to prepare the view.
+        // Embed it into an NSHostingView
+        let hostingView = NSHostingView(rootView: swiftUIView)
 
-        // Quick Look will display a loading spinner until this returns.
+        // Set the desired size for the hosting view (800x600)
+        hostingView.frame = CGRect(x: 0, y: 0, width: 800, height: 600)
+
+        // Optionally: Resize the parent view to match the hosting view size
+        view.setFrameSize(hostingView.frame.size)
+
+        // Add the hosting view to the controller's view
+        view.addSubview(hostingView)
+
+        hostingView.frame = view.bounds
+
+        // Set autoresizing mask for proper resizing behavior
+        hostingView.autoresizingMask = [.width, .height]
+
+        hostingView.frame.origin = CGPoint(x: 0, y: 0)
     }
-
 }

@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FaustSwiftUI",
+        "repositoryURL": "https://github.com/njazz/FaustSwiftUI",
+        "state": {
+          "branch": "dev",
+          "revision": "f5777a9cb2c881e9e7e8d025f2c65551fa51dc2b",
+          "version": null
+        }
+      },
+      {
+        "package": "RichTextKit",
+        "repositoryURL": "https://github.com/danielsaidi/RichTextKit.git",
+        "state": {
+          "branch": "main",
+          "revision": "d390d66740161554095e3acbd27f84dc3dcc5b03",
+          "version": null
+        }
+      },
+      {
+        "package": "SVGView",
+        "repositoryURL": "https://github.com/exyte/SVGView",
+        "state": {
+          "branch": "main",
+          "revision": "86f6d742cccf5b64844b303d80ed1f75d02fbcce",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

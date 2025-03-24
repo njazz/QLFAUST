@@ -1,0 +1,33 @@
+{
+  "originHash" : "aa4703ee75d0131ee4879706fb0a615b451757268f51f405cee631d8a831c3f0",
+  "pins" : [
+    {
+      "identity" : "faustswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/njazz/FaustSwiftUI",
+      "state" : {
+        "branch" : "dev",
+        "revision" : "f5777a9cb2c881e9e7e8d025f2c65551fa51dc2b"
+      }
+    },
+    {
+      "identity" : "richtextkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/danielsaidi/RichTextKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d390d66740161554095e3acbd27f84dc3dcc5b03"
+      }
+    },
+    {
+      "identity" : "svgview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/SVGView",
+      "state" : {
+        "branch" : "main",
+        "revision" : "86f6d742cccf5b64844b303d80ed1f75d02fbcce"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -5,14 +5,14 @@
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
-			<key>UTTypeIdentifier</key>
-			<string>com.grame.faust-dsp</string>
-			<key>UTTypeDescription</key>
-			<string>FAUST DSP File</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.plain-text</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>FAUST DSP File</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.grame.faust-dsp</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -22,14 +22,14 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeIdentifier</key>
-			<string>com.grame.faust-lib</string>
-			<key>UTTypeDescription</key>
-			<string>FAUST Library File</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.plain-text</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>FAUST Library File</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.grame.faust-lib</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
