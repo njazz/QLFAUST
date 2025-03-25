@@ -2,6 +2,8 @@
 
 QuickLook plugin for FAUST Programming Language
 
+![image](preview.gif "Preview")
+
 ## Features
 - Syntax highlighting for **FAUST DSP code**.
 - Supports highlighting for:
@@ -17,7 +19,7 @@ QuickLook plugin for FAUST Programming Language
 - SVG Display
 - DSP Preview [WIP]
 
-Current version: 0.0.1
+Current version: 0.0.2
 
 macOS 12+
 
