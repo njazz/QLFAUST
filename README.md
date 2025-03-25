@@ -17,19 +17,17 @@ QuickLook plugin for FAUST Programming Language
 - **Monospaced font** for easy reading of Faust code.
 - Distinct color coding for each type of code element (e.g., keywords, strings, operators, comments).
 - SVG Display
-- DSP Preview [WIP]
+- DSP Preview
 
 Current version: 0.0.3
 
 macOS 12+
 
 ## ROADMAP
-- [ ] Implement support for additional Faust library functions.
 - [ ] Add line numbering to the preview.
 - [ ] Refactor to support custom themes for syntax highlighting.
 - [ ] Improve performance when handling large Faust files.
-- [x] libfaust integration
-- [ ] Automated build with library
+- [ ] Automated build with libfaust binary
 
 ## Build
 

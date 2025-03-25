@@ -13,13 +13,27 @@ class AudioEngine: ObservableObject {
     private var audioUnit: AudioUnit?
     
     @Published var isRunning = false  // Observable in SwiftUI
+    @Published var available = false
     @Published var statusMessage: String  // Error messages
     
-    private var faustDSP: FaustDSPObject
+    private var faustDSP: FaustDSPObject?
 
-    init(_ object:FaustDSPObject) {
+    func setup(_ object:FaustDSPObject) {
+        if (object.getInputsCount() > 2 || object.getOutputsCount() > 2){
+            self.statusMessage = "⚠️ Channel configuration is not supported"
+            self.available = false
+            return
+        }
+        
         self.faustDSP = object
-        self.statusMessage = "Ready"
+        self.statusMessage = "🔇 AudioEngine Ready"
+        self.available = true
+    }
+    
+    init(){
+        self.faustDSP = nil
+        self.statusMessage = "⚠️ Engine is not available"
+        self.available = false
     }
 
     func start() {
@@ -127,7 +141,7 @@ class AudioEngine: ObservableObject {
         }
 
         let engine = Unmanaged<AudioEngine>.fromOpaque(inRefCon).takeUnretainedValue()
-        engine.faustDSP.processAudio(buffers, output: buffers, frames: Int32(inNumberFrames))
+        engine.faustDSP!.processAudio(buffers, output: buffers, frames: Int32(inNumberFrames))
 
         return noErr
     }

@@ -9,16 +9,19 @@ import SwiftUI
 
 import FaustSwiftUI
 
-public struct PreviewDSP: View {
-    let viewModel: FaustUIViewModel
+public struct PreviewDSP<ViewModelT: FaustUIValueBinding>: View {
+    @StateObject var viewModel: ViewModelT
+    
     let jsonString: String
 
     let ui: [FaustUI]
 
     var error: String
 
-    public init(jsonString: String) {
+    public init(jsonString: String, viewModel: ViewModelT) {
         self.jsonString = jsonString
+        
+        _viewModel = StateObject(wrappedValue: viewModel)
         
         do {
             let jsonData = Data(self.jsonString.utf8)
@@ -29,9 +32,7 @@ public struct PreviewDSP: View {
         } catch let err {
             self.ui = []
             self.error = "exception: " + err.localizedDescription
-        }
-
-        viewModel = FaustUIViewModel()
+        }        
     }
 
     public var body: some View { render }
@@ -50,5 +51,5 @@ public struct PreviewDSP: View {
 // MARK: -
 
 struct PreviewDSP_Preview: PreviewProvider {
-    static var previews: some View { PreviewDSP(jsonString: "{\"ui\":[]}") }
+    static var previews: some View { PreviewDSP(jsonString: "{\"ui\":[]}", viewModel:FaustUIViewModel()) }
 }

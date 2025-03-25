@@ -47,8 +47,6 @@ public struct PreviewFaustSource: View {
 
                 let result = try NSAttributedString(data: rtfData, options: [.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
 
-                print(result.string)
-
                 self.attributedString = result
                 self.ready = true
 

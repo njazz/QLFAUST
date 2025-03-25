@@ -123,7 +123,7 @@ std::string _generateSVGText(const std::string& text) {
 
 - (float)getParameter:(NSString *)path {
     if (_DSP) {
-        _UI.getParamValue(path.UTF8String);
+        return _UI.getParamValue(path.UTF8String);
     }
 
     return 0.0f;
@@ -194,12 +194,19 @@ std::string _generateSVGText(const std::string& text) {
 
 - (void)processAudio:(float *)input output:(float *)output frames:(int)frames {
     // temporary fix:
-    if (inputCount != 2 || outputCount != 2)
-        return;
+//    if (inputCount != 2 || outputCount != 2)
+//        return;
     
     if (_DSP) {
         _DSP->compute(frames, &input, &output);
     }
+}
+
+-(int) getInputsCount {
+    return inputCount;
+}
+-(int) getOutputsCount{
+    return outputCount;
 }
 
 @end

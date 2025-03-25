@@ -17,6 +17,10 @@ extern "C" {
 - (NSString *)getSVG;
 
 - (void)processAudio:(float *)input output:(float *)output frames:(int)frames;
+
+-(int) getInputsCount;
+-(int) getOutputsCount;
+
 @end
 
 struct llvm_dsp_factory;
