@@ -15,6 +15,10 @@
 		FAA367332D90B2D3008F9FDD /* FaustBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAA3672C2D90B2D3008F9FDD /* FaustBridge.mm */; };
 		FAD2BA3C2D921FE800E14323 /* libFaustBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA367272D90B2AE008F9FDD /* libFaustBridge.a */; };
 		FAD2BAEB2D92215000E14323 /* libfaustwithllvm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD2BAE82D92214900E14323 /* libfaustwithllvm.a */; };
+		FAE763F92D94B34C00470645 /* QLFAUST_UI in Frameworks */ = {isa = PBXBuildFile; productRef = FAE763F82D94B34C00470645 /* QLFAUST_UI */; };
+		FAE763FA2D94B35700470645 /* libFaustBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA367272D90B2AE008F9FDD /* libFaustBridge.a */; };
+		FAE763FB2D94B35900470645 /* libfaustwithllvm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD2BAE82D92214900E14323 /* libfaustwithllvm.a */; };
+		FAE763FF2D94B3BD00470645 /* FaustSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FAE763FE2D94B3BD00470645 /* FaustSwiftUI */; };
 		FAF395602D9041AF00F7F2D4 /* QLFAUSTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FA868A4E2D873A1000B7176F /* QLFAUSTExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -249,6 +253,7 @@
 		FAD2BAE42D92214900E14323 /* misc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
 		FAD2BAE52D92214900E14323 /* sound-file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sound-file.h"; sourceTree = "<group>"; };
 		FAD2BAE82D92214900E14323 /* libfaustwithllvm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfaustwithllvm.a; sourceTree = "<group>"; };
+		FAE763E52D94B30500470645 /* FAUSTViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAUSTViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -266,6 +271,21 @@
 			);
 			target = FA868A1B2D8739F800B7176F /* QLFAUST */;
 		};
+		FAE763F62D94B30600470645 /* Exceptions for "FAUSTViewer" folder in "FAUSTViewer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FAE763E42D94B30500470645 /* FAUSTViewer */;
+		};
+		FAE763FD2D94B39200470645 /* Exceptions for "QLFAUSTExtension" folder in "FAUSTViewer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AudioEngine.swift,
+				QLFAUSTView.swift,
+			);
+			target = FAE763E42D94B30500470645 /* FAUSTViewer */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -281,8 +301,17 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				FA868A5F2D873A1000B7176F /* Exceptions for "QLFAUSTExtension" folder in "QLFAUSTExtension" target */,
+				FAE763FD2D94B39200470645 /* Exceptions for "QLFAUSTExtension" folder in "FAUSTViewer" target */,
 			);
 			path = QLFAUSTExtension;
+			sourceTree = "<group>";
+		};
+		FAE763E62D94B30500470645 /* FAUSTViewer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FAE763F62D94B30600470645 /* Exceptions for "FAUSTViewer" folder in "FAUSTViewer" target */,
+			);
+			path = FAUSTViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -329,6 +358,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAE763E22D94B30500470645 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE763FA2D94B35700470645 /* libFaustBridge.a in Frameworks */,
+				FAE763F92D94B34C00470645 /* QLFAUST_UI in Frameworks */,
+				FAE763FF2D94B3BD00470645 /* FaustSwiftUI in Frameworks */,
+				FAE763FB2D94B35900470645 /* libfaustwithllvm.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -341,6 +381,7 @@
 				FAA3672F2D90B2D3008F9FDD /* FaustBridge */,
 				FA868A1E2D8739F800B7176F /* QLFAUST */,
 				FA868A522D873A1000B7176F /* QLFAUSTExtension */,
+				FAE763E62D94B30500470645 /* FAUSTViewer */,
 				FA868A4F2D873A1000B7176F /* Frameworks */,
 				FA868A1D2D8739F800B7176F /* Products */,
 			);
@@ -354,6 +395,7 @@
 				FA868A372D8739F900B7176F /* QLFAUSTUITests.xctest */,
 				FA868A4E2D873A1000B7176F /* QLFAUSTExtension.appex */,
 				FAA367272D90B2AE008F9FDD /* libFaustBridge.a */,
+				FAE763E52D94B30500470645 /* FAUSTViewer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -763,6 +805,30 @@
 			productReference = FAA367272D90B2AE008F9FDD /* libFaustBridge.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		FAE763E42D94B30500470645 /* FAUSTViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE763F72D94B30600470645 /* Build configuration list for PBXNativeTarget "FAUSTViewer" */;
+			buildPhases = (
+				FAE763E12D94B30500470645 /* Sources */,
+				FAE763E22D94B30500470645 /* Frameworks */,
+				FAE763E32D94B30500470645 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FAE763E62D94B30500470645 /* FAUSTViewer */,
+			);
+			name = FAUSTViewer;
+			packageProductDependencies = (
+				FAE763F82D94B34C00470645 /* QLFAUST_UI */,
+				FAE763FE2D94B3BD00470645 /* FaustSwiftUI */,
+			);
+			productName = FAUSTViewer;
+			productReference = FAE763E52D94B30500470645 /* FAUSTViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -788,6 +854,9 @@
 						CreatedOnToolsVersion = 16.2;
 					};
 					FAA367262D90B2AE008F9FDD = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					FAE763E42D94B30500470645 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -816,6 +885,7 @@
 				FA868A2C2D8739F900B7176F /* QLFAUSTTests */,
 				FA868A362D8739F900B7176F /* QLFAUSTUITests */,
 				FAA367262D90B2AE008F9FDD /* FaustBridge */,
+				FAE763E42D94B30500470645 /* FAUSTViewer */,
 			);
 		};
 /* End PBXProject section */
@@ -843,6 +913,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA868A4C2D873A1000B7176F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE763E32D94B30500470645 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -885,6 +962,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA367332D90B2D3008F9FDD /* FaustBridge.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE763E12D94B30500470645 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,7 +1163,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1117,7 +1201,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1229,7 +1313,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST2.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1264,7 +1348,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST2.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1313,6 +1397,72 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
+			};
+			name = Release;
+		};
+		FAE763F42D94B30600470645 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FAUSTViewer/FAUSTViewer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FAUSTViewer/Preview Content\"";
+				DEVELOPMENT_TEAM = 85478UQJJR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FAUSTViewer/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Faust-2.79.3/lib",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.FAUSTViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FAE763F52D94B30600470645 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FAUSTViewer/FAUSTViewer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FAUSTViewer/Preview Content\"";
+				DEVELOPMENT_TEAM = 85478UQJJR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FAUSTViewer/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Faust-2.79.3/lib",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.FAUSTViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1373,6 +1523,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		FAE763F72D94B30600470645 /* Build configuration list for PBXNativeTarget "FAUSTViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE763F42D94B30600470645 /* Debug */,
+				FAE763F52D94B30600470645 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
@@ -1400,6 +1559,16 @@
 			productName = QLFAUST_UI;
 		};
 		FA9FB77D2D91BD9600DAEEF4 /* FaustSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9FB77B2D91BD0A00DAEEF4 /* XCRemoteSwiftPackageReference "FaustSwiftUI" */;
+			productName = FaustSwiftUI;
+		};
+		FAE763F82D94B34C00470645 /* QLFAUST_UI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9FB77C2D91BD5200DAEEF4 /* XCLocalSwiftPackageReference "local_modules/QLFAUST_UI" */;
+			productName = QLFAUST_UI;
+		};
+		FAE763FE2D94B3BD00470645 /* FaustSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA9FB77B2D91BD0A00DAEEF4 /* XCRemoteSwiftPackageReference "FaustSwiftUI" */;
 			productName = FaustSwiftUI;

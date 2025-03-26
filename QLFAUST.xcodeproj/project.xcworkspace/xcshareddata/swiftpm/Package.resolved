@@ -1,5 +1,5 @@
 {
-  "originHash" : "aa4703ee75d0131ee4879706fb0a615b451757268f51f405cee631d8a831c3f0",
+  "originHash" : "290ff3e85222ea52ba18e3da69b8223f37baf9ea92139ad226049773a7e60ebe",
   "pins" : [
     {
       "identity" : "faustswiftui",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/njazz/FaustSwiftUI",
       "state" : {
         "branch" : "dev",
-        "revision" : "f5777a9cb2c881e9e7e8d025f2c65551fa51dc2b"
+        "revision" : "478ae7579f1e365bd65022ab28512b07a4b6960b"
       }
     },
     {

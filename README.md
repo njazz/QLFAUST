@@ -28,6 +28,7 @@ macOS 12+
 - [ ] Refactor to support custom themes for syntax highlighting.
 - [ ] Improve performance when handling large Faust files.
 - [ ] Automated build with libfaust binary
+- [ ] Support & embed faust libraries - currently the import() calls are not working
 
 ## Build
 
