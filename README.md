@@ -20,9 +20,16 @@ QuickLook plugin for FAUST Programming Language
 - **Monospaced font** for easy reading of Faust code.
 - Distinct color coding for each type of code element (e.g., keywords, strings, operators, comments).
 
+This repository has container app with extension and document-based test app.
+
 Current version: 0.0.3
 
 macOS 12+
+
+## Build instructions
+
+Please note that this repository is missing 'libfaustllvm.a'
+- download current version for your platform (or multiple with lipo) and put in Faust-X.XX.X/lib folder
 
 ## Roadmap
 - [ ] Add line numbering to the preview.
@@ -31,11 +38,9 @@ macOS 12+
 - [ ] Automated build with libfaust binary
 - [ ] Support & embed faust libraries - currently the import() calls are not working
 - [ ] Interactive SVG view - current realisation is missing links
-
-## Build
-
-Please note that this repository is missing 'libfaustllvm.a'
-- download current version for your platform (or multiple with lipo) and put in Faust-X.XX.X/lib folder
+- [ ] Improve widgets rendering/layout (FaustSwiftUI package)
+- [ ] Add style metadata support to widget layout (FaustSwiftUI package) 
+- [ ] Fix features of document-based app
 
 ---
 FAUST Programming language:
