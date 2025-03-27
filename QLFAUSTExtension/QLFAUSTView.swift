@@ -144,10 +144,9 @@ struct QLFAUSTView: View {
                         .frame(width: 120, height: 30)
                         .buttonStyle(.plain)
                         
-                        Text(engine.statusMessage)
+                        Text(engine.statusMessage).frame(maxWidth: .infinity)
                         
-                        Text("Inputs: \(_faustDspObject.wrappedValue!.getInputsCount())").frame(maxWidth:80)
-                        Text("Outputs: \(_faustDspObject.wrappedValue!.getOutputsCount())").frame(maxWidth:80)
+                        Text("Channels: \(_faustDspObject.wrappedValue!.getInputsCount()) in \(_faustDspObject.wrappedValue!.getOutputsCount()) out").frame(maxWidth:.infinity)
                         
                         
                     }
