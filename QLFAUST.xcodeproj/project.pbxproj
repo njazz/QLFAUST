@@ -257,6 +257,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FA7D4C372D9580E600A8BF2D /* Exceptions for "QLFAUST" folder in "FAUSTViewer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+			);
+			target = FAE763E42D94B30500470645 /* FAUSTViewer */;
+		};
 		FA868A5F2D873A1000B7176F /* Exceptions for "QLFAUSTExtension" folder in "QLFAUSTExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -292,6 +299,7 @@
 		FA868A1E2D8739F800B7176F /* QLFAUST */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				FA7D4C372D9580E600A8BF2D /* Exceptions for "QLFAUST" folder in "FAUSTViewer" target */,
 				FA868A652D873B3500B7176F /* Exceptions for "QLFAUST" folder in "QLFAUST" target */,
 			);
 			path = QLFAUST;
@@ -300,8 +308,8 @@
 		FA868A522D873A1000B7176F /* QLFAUSTExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				FA868A5F2D873A1000B7176F /* Exceptions for "QLFAUSTExtension" folder in "QLFAUSTExtension" target */,
 				FAE763FD2D94B39200470645 /* Exceptions for "QLFAUSTExtension" folder in "FAUSTViewer" target */,
+				FA868A5F2D873A1000B7176F /* Exceptions for "QLFAUSTExtension" folder in "QLFAUSTExtension" target */,
 			);
 			path = QLFAUSTExtension;
 			sourceTree = "<group>";
@@ -880,12 +888,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				FAE763E42D94B30500470645 /* FAUSTViewer */,
 				FA868A1B2D8739F800B7176F /* QLFAUST */,
 				FA868A4D2D873A1000B7176F /* QLFAUSTExtension */,
 				FA868A2C2D8739F900B7176F /* QLFAUSTTests */,
 				FA868A362D8739F900B7176F /* QLFAUSTUITests */,
 				FAA367262D90B2AE008F9FDD /* FaustBridge */,
-				FAE763E42D94B30500470645 /* FAUSTViewer */,
 			);
 		};
 /* End PBXProject section */
@@ -1163,7 +1171,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1201,7 +1209,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1313,7 +1321,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST2.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1348,7 +1356,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST2.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1424,6 +1432,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Faust-2.79.3/lib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.FAUSTViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1457,6 +1466,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Faust-2.79.3/lib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.FAUSTViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
