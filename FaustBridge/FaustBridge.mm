@@ -95,6 +95,12 @@ std::string _generateSVGText(const std::string& text) {
 
     NSString *tempRoot = NSTemporaryDirectory();
     NSString *outputDir = [tempRoot stringByAppendingPathComponent:@"faust_svg_output"];
+    
+    [[NSFileManager defaultManager] createDirectoryAtPath:outputDir
+                              withIntermediateDirectories:YES
+                                               attributes:nil
+                                                    error:nil];
+    
     const char *outputDirCStr = [outputDir UTF8String];
     const char *argv[] = {
         "-svg", "--output-dir", outputDirCStr
@@ -156,15 +162,11 @@ std::string _generateSVGText(const std::string& text) {
 - (NSString *)getSVG {
     // Temporary directory
     NSString *tempRoot = NSTemporaryDirectory();
-    NSString *outputDir = [tempRoot stringByAppendingPathComponent:@"faust_svg_output"];
 
     NSString *dspFileName = [[[_dspPath lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@"-svg"];
     NSString *outputFileDir = [[tempRoot stringByAppendingPathComponent:@"faust_svg_output"] stringByAppendingPathComponent:dspFileName];
 
-    [[NSFileManager defaultManager] createDirectoryAtPath:outputDir
-                              withIntermediateDirectories:YES
-                                               attributes:nil
-                                                    error:nil];
+    
 
     if (!_DSP || !_jsonUI) {
         return [NSString stringWithUTF8String:_generateSVGText("FaustDSPObject SVG Error").c_str()];
@@ -173,9 +175,10 @@ std::string _generateSVGText(const std::string& text) {
     // SVG File
     NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:outputFileDir error:nil];
 
-    for (NSString *file in contents) {
-        if ([[file pathExtension] isEqualToString:@"svg"]) {
-            NSString *fullPath = [outputFileDir stringByAppendingPathComponent:file];
+//    for (NSString *file in contents) {
+//        if ([[file pathExtension] isEqualToString:@"svg"])
+//        {
+            NSString *fullPath = [outputFileDir stringByAppendingPathComponent:@"process.svg"];
             NSError *error = nil;
             NSString *fileContents = [NSString stringWithContentsOfFile:fullPath
                                                                encoding:NSUTF8StringEncoding
@@ -186,17 +189,13 @@ std::string _generateSVGText(const std::string& text) {
             } else {
                 return fileContents;
             }
-        }
-    }
+//        }
+//    }
 
     return [NSString stringWithUTF8String:_generateSVGText("Unknown error").c_str()];
 }
 
-- (void)processAudio:(float *)input output:(float *)output frames:(int)frames {
-    // temporary fix:
-//    if (inputCount != 2 || outputCount != 2)
-//        return;
-    
+- (void)processAudio:(float *)input output:(float *)output frames:(int)frames {    
     if (_DSP) {
         _DSP->compute(frames, &input, &output);
     }

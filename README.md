@@ -29,6 +29,7 @@ macOS 12+
 - [ ] Improve performance when handling large Faust files.
 - [ ] Automated build with libfaust binary
 - [ ] Support & embed faust libraries - currently the import() calls are not working
+- [ ] Interactive SVG view
 
 ## Build
 
