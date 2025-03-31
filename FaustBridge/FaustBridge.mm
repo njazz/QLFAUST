@@ -96,18 +96,41 @@ std::string _generateSVGText(const std::string& text) {
     NSString *tempRoot = NSTemporaryDirectory();
     NSString *outputDir = [tempRoot stringByAppendingPathComponent:@"faust_svg_output"];
     
-    [[NSFileManager defaultManager] createDirectoryAtPath:outputDir
-                              withIntermediateDirectories:YES
-                                               attributes:nil
-                                                    error:nil];
+    {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+
+        if ([fileManager fileExistsAtPath:outputDir]) {
+            NSError *removeError = nil;
+            [fileManager removeItemAtPath:outputDir error:&removeError];
+            if (removeError) {
+                NSLog(@"Error deleting directory: %@", removeError.localizedDescription);
+            }
+        }
+
+        NSError *createError = nil;
+        [fileManager createDirectoryAtPath:outputDir
+               withIntermediateDirectories:YES
+                                attributes:nil
+                                     error:&createError];
+
+        if (createError) {
+            NSLog(@"Error creating directory: %@", createError.localizedDescription);
+            *err = [createError localizedDescription];
+            return nil;
+        }
+    }
+           
+    NSString* libraryPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithUTF8String:"faustlibraries"] ofType:nil];
     
     const char *outputDirCStr = [outputDir UTF8String];
-    const char *argv[] = {
-        "-svg", "--output-dir", outputDirCStr
-    };
-    int argc = 3;
+    
+    std::vector<const char*> args { "-svg", "--output-dir", outputDirCStr };
+    if (libraryPath){
+        args.push_back("-I");
+        args.push_back(libraryPath.UTF8String);
+    }
 
-    auto dspFactory = createDSPFactoryFromFile(path.UTF8String, argc, argv, "", error_msg);
+    auto dspFactory = createDSPFactoryFromFile(path.UTF8String, (int)args.size(), args.data(), "", error_msg);
 
     if (!dspFactory) {
         if (!error_msg.size()) {
