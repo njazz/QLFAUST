@@ -164,7 +164,6 @@ struct QLFAUSTView: View {
                 .cornerRadius(5)
                 
             }
-
             .frame(height: 32)
             .cornerRadius(5)
             
@@ -218,6 +217,15 @@ struct QLFAUSTView: View {
                         .transition(.slide)
                     }
                 }
+            }
+            
+            
+            // version
+            HStack(){
+                Spacer()
+                Text("QLFAUST version \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown") (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Unknown"))  ")
+                                .font(.footnote)  // You can adjust the font size here
+                                .foregroundColor(.gray)
             }
         }
     }
