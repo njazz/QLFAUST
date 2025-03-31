@@ -23,7 +23,7 @@ QuickLook plugin for FAUST Programming Language
 
 This repository has container app with extension and document-based test app.
 
-Current version: 0.0.4
+Current version: 0.0.5
 
 macOS 12+
 
@@ -33,7 +33,7 @@ Please note that this repository is missing 'libfaustllvm.a'
 - download current version for your platform (or multiple with lipo) and put in Faust-X.XX.X/lib folder
 
 ## Roadmap
-- [ ] Support & embed faust libraries - currently the import() calls are not working
+- [x] Support & embed faust libraries 
 - [ ] Add line numbering to the preview.
 - [ ] Refactor to support custom themes for syntax highlighting.
 - [ ] Improve performance when handling large Faust files.
