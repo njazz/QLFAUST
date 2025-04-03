@@ -33,6 +33,6 @@ class PreviewViewController: NSViewController, QLPreviewingController {
         hostingView.layerContentsRedrawPolicy = .onSetNeedsDisplay
         hostingView.setAccessibilityRole(.group)
 
-        view.window?.makeFirstResponder(hostingView)
+        // view.window?.makeFirstResponder(hostingView)
     }
 }
