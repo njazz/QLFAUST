@@ -21,6 +21,8 @@ extern "C" {
 -(int) getInputsCount;
 -(int) getOutputsCount;
 
+
+
 @end
 
 struct llvm_dsp_factory;
@@ -31,6 +33,8 @@ struct llvm_dsp_factory;
 - (id)initWithDSPFactory:(struct llvm_dsp_factory *)factory path:(NSString *)path;
 
 + (FaustDSPObject *)dspObjectWithPath:(NSString *)path error:(NSString **)err;
+
++(NSString*) libFAUSTVersion;
 
 @end
 

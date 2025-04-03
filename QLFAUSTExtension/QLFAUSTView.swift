@@ -223,7 +223,7 @@ struct QLFAUSTView: View {
             // version
             HStack(){
                 Spacer()
-                Text("QLFAUST version \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown") (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Unknown"))  ")
+                Text("QLFAUST version \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown") (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Unknown"))  | FAUST \(FaustDSPObject.libFAUSTVersion()) ")
                                 .font(.footnote)  // You can adjust the font size here
                                 .foregroundColor(.gray)
             }
