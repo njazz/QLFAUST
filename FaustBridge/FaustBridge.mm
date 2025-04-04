@@ -90,11 +90,115 @@ std::string _generateSVGText(const std::string& text) {
     }
 }
 
+//void accessLibFilesInSameFolder(NSString *path) {
+//    // Get the directory of the provided file
+//    NSString *directoryPath = [path stringByDeletingLastPathComponent];
+//    
+//    // Create a file coordinator
+//    NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] initWithFilePresenter:nil];
+//    
+//    // Define an error pointer
+//    NSError *error = nil;
+//
+//    // Coordinate a reading operation on the directory
+//    [fileCoordinator coordinateReadingItemAtURL:[NSURL fileURLWithPath:directoryPath]
+//                                        options:0
+//                                          error:&error
+//                                     byAccessor:^(NSURL *directoryURL) {
+//        // List all files in the directory
+//        NSFileManager *fileManager = [NSFileManager defaultManager];
+//        NSArray<NSString *> *fileList = [fileManager contentsOfDirectoryAtPath:directoryPath error:nil];
+//        
+//        // Filter for ".lib" files
+//        for (NSString *file in fileList) {
+//            if ([file.pathExtension isEqualToString:@"lib"]) {
+//                NSString *fullFilePath = [directoryPath stringByAppendingPathComponent:file];
+//                NSURL *fileURL = [NSURL fileURLWithPath:fullFilePath];
+//
+//                // Now, you have access to each ".lib" file in the same folder
+//                NSLog(@"Found .lib file: %@", fileURL.path);
+//                
+//                // Read the file safely (Example: reading contents)
+//                NSError *readError = nil;
+//                NSString *fileContents = [NSString stringWithContentsOfFile:fileURL.path encoding:NSUTF8StringEncoding error:&readError];
+//
+//                if (fileContents) {
+//                    NSLog(@"Contents of %@: %@", fileURL.lastPathComponent, fileContents);
+//                } else {
+//                    NSLog(@"Failed to read file: %@, Error: %@", fileURL.lastPathComponent, readError.localizedDescription);
+//                }
+//            }
+//        }
+//    }];
+//    
+//    // Handle any error from coordination
+//    if (error) {
+//        NSLog(@"Error coordinating access: %@", error.localizedDescription);
+//    }
+//}
+
+bool accessLibFilesInSameFolder(NSString *path) {
+    NSURL *fileURL = [NSURL fileURLWithPath:path];
+
+    // Get directory URL
+    NSURL *directoryURL = [fileURL URLByDeletingLastPathComponent];
+
+    // Start accessing the security-scoped resource
+    BOOL startedAccessing = [directoryURL startAccessingSecurityScopedResource];
+    
+    if (!startedAccessing) {
+        NSLog(@"Failed to gain security access to directory: %@", directoryURL);
+        return false;
+    }
+
+    NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] initWithFilePresenter:nil];
+    NSError *error = nil;
+    
+    // Coordinate access to the directory
+    [fileCoordinator coordinateReadingItemAtURL:directoryURL
+                                        options:0
+                                          error:&error
+                                     byAccessor:^(NSURL *newURL) {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSArray<NSURL *> *fileList = [fileManager contentsOfDirectoryAtURL:newURL
+                                                   includingPropertiesForKeys:nil
+                                                                      options:NSDirectoryEnumerationSkipsHiddenFiles
+                                                                        error:nil];
+
+        for (NSURL *file in fileList) {
+            if ([file.pathExtension isEqualToString:@"lib"]) {
+                NSLog(@"Found .lib file: %@", file.path);
+
+                NSError *readError = nil;
+                NSString *fileContents = [NSString stringWithContentsOfURL:file encoding:NSUTF8StringEncoding error:&readError];
+
+                if (fileContents) {
+                    NSLog(@"Contents of %@: %@", file.lastPathComponent, fileContents);
+                } else {
+                    NSLog(@"Failed to read file: %@, Error: %@", file.lastPathComponent, readError.localizedDescription);
+                }
+            }
+        }
+    }];
+
+    // Stop accessing the security-scoped resource
+    [directoryURL stopAccessingSecurityScopedResource];
+
+    if (error) {
+        NSLog(@"Error accessing directory: %@", error.localizedDescription);
+        return false;
+    }
+    
+    return true;
+}
+
 + (FaustDSPObject *)dspObjectWithPath:(NSString *)path error:(NSString **)err {
     std::string error_msg {};
 
     NSString *tempRoot = NSTemporaryDirectory();
     NSString *outputDir = [tempRoot stringByAppendingPathComponent:@"faust_svg_output"];
+    
+    
     
     {
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -121,20 +225,28 @@ std::string _generateSVGText(const std::string& text) {
     }
            
     NSString* libraryPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithUTF8String:"faustlibraries"] ofType:nil];
+    NSString *directoryPath = [path stringByDeletingLastPathComponent];
     
     const char *outputDirCStr = [outputDir UTF8String];
     
     std::vector<const char*> args { "-svg", "--output-dir", outputDirCStr };
+    
     if (libraryPath){
-        args.push_back("-I");
+        args.push_back("--import-dir");
         args.push_back(libraryPath.UTF8String);
     }
-
+    
+    auto hasDirectoryAccess = accessLibFilesInSameFolder(path);
+    if (hasDirectoryAccess){
+        args.push_back("--import-dir");
+        args.push_back(directoryPath.UTF8String);
+    }
+    
     auto dspFactory = createDSPFactoryFromFile(path.UTF8String, (int)args.size(), args.data(), "", error_msg);
 
     if (!dspFactory) {
         if (!error_msg.size()) {
-            error_msg = "factory failed";
+            error_msg = "createDSPFactoryFromFile() failed\nfile: '"+std::string(path.UTF8String)+"'";
         }
 
         *err =  [NSString stringWithUTF8String:error_msg.c_str()];
@@ -229,6 +341,10 @@ std::string _generateSVGText(const std::string& text) {
 }
 -(int) getOutputsCount{
     return outputCount;
+}
+
++(NSString*)libFAUSTVersion{
+    return [NSString stringWithCString:getCLibFaustVersion() encoding:NSUTF8StringEncoding];
 }
 
 @end

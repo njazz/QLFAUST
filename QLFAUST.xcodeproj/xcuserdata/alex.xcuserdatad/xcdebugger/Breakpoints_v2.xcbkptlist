@@ -30,8 +30,8 @@
             filePath = "FaustBridge/FaustBridge.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
             landmarkName = "-processAudio:output:frames:"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "FaustBridge/FaustBridge.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
             landmarkName = "-processAudio:output:frames:"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "FaustBridge/FaustBridge.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "+dspObjectWithPath:error:"
             landmarkType = "7">
          </BreakpointContent>
@@ -194,6 +194,22 @@
             endingLineNumber = "338"
             landmarkName = "render"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EC5D49E-7D9E-4338-9FEB-E9030CA7C10A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FaustBridge/FaustBridge.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "+dspObjectWithPath:error:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
