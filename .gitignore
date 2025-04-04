@@ -1,4 +1,5 @@
 ImportLibrary/Faust-*
 ImportLibrary/Downloads/*
-ImportLibrary/Xcode/CMake*
-ImportLibrary/Xcode/cmake*
+ImportLibrary/Xcode/build/*
+ImportLibrary/Xcode/CMakeFiles/*
+ImportLibrary/Xcode/cmake_*

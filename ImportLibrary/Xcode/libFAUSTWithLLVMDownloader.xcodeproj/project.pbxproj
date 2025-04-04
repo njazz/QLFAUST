@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		2AAA5C07441145CFBC19AB16 /* ZERO_CHECK */ = {
+		4A44542562C34A83AC70CE05 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = DB39FBD716E741E588C3C241 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = BB7317DECB9E4330ADEA252B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				5C2ED6ED254997CD65C76AC7 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				E1E8F8130FDC4C058E33CC7E /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		87D723F96F8B45169462CEC1 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 90C892DC2B874952A0B12836 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				E34820D9CF4E10B06AFB9765 /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -18,131 +30,119 @@
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
-		5883BD290AF845C190298D89 /* ALL_BUILD */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 655BD58C9480479FA6C98B38 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
-			buildPhases = (
-				5C2ED6ED254997CD65C76AC7 /* Generate CMakeFiles/ALL_BUILD */,
-			);
-			dependencies = (
-				90ACDDD8D95B483C85B1068E /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildStyle section */
-		08129F46254B4CB8B1673A52 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		3FCE5F8307BD4B009C6D8848 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		CE0D880B478443BD9330DC3B /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		D6BDA0F434E04F2DAEC8C5F0 /* MinSizeRel */ = {
+		1C812230A60A469CAC9640BF /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
+		44440DD192334DD49639A6FE /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		5DB26189C5E243E8A1D6C36B /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		D359820F0490420AB8C0536F /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		867EEDE9C94041EF94FAAC19 /* PBXContainerItemProxy */ = {
+		3ABD928973B541D79E935BDE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F86AA4D113024603BA30D9EE /* Project object */;
+			containerPortal = B366F1292AEC4782963E2F47 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2AAA5C07441145CFBC19AB16;
+			remoteGlobalIDString = 87D723F96F8B45169462CEC1;
 			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		87633337DBD841938F327D9A /* /Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		464381170B0E47A5829BDC37 /* /Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1D9A3E4C582A46B7ACE0A984 /* CMake Rules */ = {
+		4F6A7EB2E5964DC7AAA8A4FF /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		8B279CAC54AC45C2B52191B4 = {
-			isa = PBXGroup;
-			children = (
-				A9839326FB0E4013B471DA91 /* ALL_BUILD */,
-				D7E1BFAAC71B4653BE262A76 /* Products */,
-				CFA224590A2143FB8AFF6229 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		A9839326FB0E4013B471DA91 /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				1D9A3E4C582A46B7ACE0A984 /* CMake Rules */,
-				87633337DBD841938F327D9A /* /Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/CMakeLists.txt */,
+				E0DD9BBCAB8F4E2E865F049D /* CMake Rules */,
+				464381170B0E47A5829BDC37 /* /Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		CFA224590A2143FB8AFF6229 /* Frameworks */ = {
+		92734DD18E8745FE8DBE8B6B = {
+			isa = PBXGroup;
+			children = (
+				4F6A7EB2E5964DC7AAA8A4FF /* ALL_BUILD */,
+				D36E64A4386644A78C941FB7 /* Products */,
+				C4562AB7DE444444924BA302 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C4562AB7DE444444924BA302 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D7E1BFAAC71B4653BE262A76 /* Products */ = {
+		D36E64A4386644A78C941FB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E0DD9BBCAB8F4E2E865F049D /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
-		F86AA4D113024603BA30D9EE /* Project object */ = {
+		B366F1292AEC4782963E2F47 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1620;
 			};
-			buildConfigurationList = 4A54E9AA125C48CEAEE1CA9A /* Build configuration list for PBXProject "libFAUSTWithLLVMDownloader" */;
+			buildConfigurationList = 5AA3078C77BF44A186F8080B /* Build configuration list for PBXProject "libFAUSTWithLLVMDownloader" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				08129F46254B4CB8B1673A52 /* Debug */,
-				3FCE5F8307BD4B009C6D8848 /* Release */,
-				D6BDA0F434E04F2DAEC8C5F0 /* MinSizeRel */,
-				CE0D880B478443BD9330DC3B /* RelWithDebInfo */,
+				D359820F0490420AB8C0536F /* Debug */,
+				44440DD192334DD49639A6FE /* Release */,
+				1C812230A60A469CAC9640BF /* MinSizeRel */,
+				5DB26189C5E243E8A1D6C36B /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 8B279CAC54AC45C2B52191B4;
+			mainGroup = 92734DD18E8745FE8DBE8B6B;
 			projectDirPath = "/Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary";
 			projectRoot = "";
 			targets = (
-				5883BD290AF845C190298D89 /* ALL_BUILD */,
-				2AAA5C07441145CFBC19AB16 /* ZERO_CHECK */,
+				4A44542562C34A83AC70CE05 /* ALL_BUILD */,
+				87D723F96F8B45169462CEC1 /* ZERO_CHECK */,
 			);
 		};
 /* End PBXProject section */
@@ -247,59 +247,15 @@ fi
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		90ACDDD8D95B483C85B1068E /* PBXTargetDependency */ = {
+		E1E8F8130FDC4C058E33CC7E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2AAA5C07441145CFBC19AB16 /* ZERO_CHECK */;
-			targetProxy = 867EEDE9C94041EF94FAAC19 /* PBXContainerItemProxy */;
+			target = 87D723F96F8B45169462CEC1 /* ZERO_CHECK */;
+			targetProxy = 3ABD928973B541D79E935BDE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02662B5F8EDA4EEBB2C46166 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		412FBA4E164B44129D73119F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		5C805A5D1F1F4424BB3668AA /* MinSizeRel */ = {
+		1CC1A7993D514F97A33BCA7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
@@ -307,109 +263,20 @@ fi
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "/Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/Xcode/build";
-			};
-			name = MinSizeRel;
-		};
-		75D24C4D32D84E5FA73462EB /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		818DB7D63A9A44C2B1FA33AA /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		8C3F24FA0A96483B9BFBFAF2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Release;
 		};
-		8FA10F940F2942D59135A158 /* RelWithDebInfo */ = {
+		2A424702B2C84AEE952B7839 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "/Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/Xcode/build";
 			};
-			name = RelWithDebInfo;
+			name = Debug;
 		};
-		94A725A6263A4A09867DC900 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		97D08B707AFE4491B7E9E35E /* MinSizeRel */ = {
+		4A16A80ADADD4A06810D5783 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -431,7 +298,161 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		C8EC04299A0E4E2A9CFA18B3 /* Release */ = {
+		4DA01EFF38A94F56B4C5A907 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		547179865D20459E882C8D9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		56AD317CDCD94779B67757FF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/Xcode/build";
+			};
+			name = RelWithDebInfo;
+		};
+		6E1417EADAED44F19F93DE6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		7F23D903B56A449F9CC7AB48 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/Xcode/build";
+			};
+			name = MinSizeRel;
+		};
+		958E0DF849F24A9D8939E2CC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CA984BCC56FF485B8802760B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CD2EA87AB600433CA9B3F19D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		F6C560DA0C2C423F9129418C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -452,65 +473,44 @@ fi
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Release;
-		};
-		E2C56855EE434D87B2712107 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				MACOSX_DEPLOYMENT_TARGET = 14.7;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "/Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/Xcode/build";
-			};
-			name = Release;
-		};
-		EF498A95194F42B8A8656B7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				MACOSX_DEPLOYMENT_TARGET = 14.7;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk;
-				SYMROOT = "/Users/alex/Documents/ios-macmini/QLFAUST/ImportLibrary/Xcode/build";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A54E9AA125C48CEAEE1CA9A /* Build configuration list for PBXProject "libFAUSTWithLLVMDownloader" */ = {
+		5AA3078C77BF44A186F8080B /* Build configuration list for PBXProject "libFAUSTWithLLVMDownloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF498A95194F42B8A8656B7B /* Debug */,
-				E2C56855EE434D87B2712107 /* Release */,
-				5C805A5D1F1F4424BB3668AA /* MinSizeRel */,
-				8FA10F940F2942D59135A158 /* RelWithDebInfo */,
+				2A424702B2C84AEE952B7839 /* Debug */,
+				1CC1A7993D514F97A33BCA7D /* Release */,
+				7F23D903B56A449F9CC7AB48 /* MinSizeRel */,
+				56AD317CDCD94779B67757FF /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		655BD58C9480479FA6C98B38 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		90C892DC2B874952A0B12836 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				412FBA4E164B44129D73119F /* Debug */,
-				C8EC04299A0E4E2A9CFA18B3 /* Release */,
-				97D08B707AFE4491B7E9E35E /* MinSizeRel */,
-				818DB7D63A9A44C2B1FA33AA /* RelWithDebInfo */,
+				6E1417EADAED44F19F93DE6B /* Debug */,
+				547179865D20459E882C8D9C /* Release */,
+				4DA01EFF38A94F56B4C5A907 /* MinSizeRel */,
+				958E0DF849F24A9D8939E2CC /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		DB39FBD716E741E588C3C241 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		BB7317DECB9E4330ADEA252B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02662B5F8EDA4EEBB2C46166 /* Debug */,
-				8C3F24FA0A96483B9BFBFAF2 /* Release */,
-				94A725A6263A4A09867DC900 /* MinSizeRel */,
-				75D24C4D32D84E5FA73462EB /* RelWithDebInfo */,
+				CD2EA87AB600433CA9B3F19D /* Debug */,
+				F6C560DA0C2C423F9129418C /* Release */,
+				4A16A80ADADD4A06810D5783 /* MinSizeRel */,
+				CA984BCC56FF485B8802760B /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F86AA4D113024603BA30D9EE /* Project object */;
+	rootObject = B366F1292AEC4782963E2F47 /* Project object */;
 }
