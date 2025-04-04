@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA175EB62D9FCB730044A6B6 /* libfaustwithllvm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA175EB52D9FCB730044A6B6 /* libfaustwithllvm.a */; };
+		FA175EB72D9FCB730044A6B6 /* libfaustwithllvm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA175EB52D9FCB730044A6B6 /* libfaustwithllvm.a */; };
+		FA175EB82D9FCB730044A6B6 /* libfaustwithllvm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA175EB52D9FCB730044A6B6 /* libfaustwithllvm.a */; };
 		FA3BEEE02D91C27400E77A67 /* QLFAUST_UI in Frameworks */ = {isa = PBXBuildFile; productRef = FA3BEEDF2D91C27400E77A67 /* QLFAUST_UI */; };
 		FA868A512D873A1000B7176F /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA868A502D873A1000B7176F /* Quartz.framework */; };
 		FA8DEB282D9B04F400DF4E86 /* faustlibraries in Resources */ = {isa = PBXBuildFile; fileRef = FA8DEB272D9B04EE00DF4E86 /* faustlibraries */; };
@@ -16,15 +19,20 @@
 		FAA367302D90B2D3008F9FDD /* FaustBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA3672B2D90B2D3008F9FDD /* FaustBridge.h */; };
 		FAA367332D90B2D3008F9FDD /* FaustBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAA3672C2D90B2D3008F9FDD /* FaustBridge.mm */; };
 		FAD2BA3C2D921FE800E14323 /* libFaustBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA367272D90B2AE008F9FDD /* libFaustBridge.a */; };
-		FAD2BAEB2D92215000E14323 /* libfaustwithllvm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD2BAE82D92214900E14323 /* libfaustwithllvm.a */; };
 		FAE763F92D94B34C00470645 /* QLFAUST_UI in Frameworks */ = {isa = PBXBuildFile; productRef = FAE763F82D94B34C00470645 /* QLFAUST_UI */; };
 		FAE763FA2D94B35700470645 /* libFaustBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA367272D90B2AE008F9FDD /* libFaustBridge.a */; };
-		FAE763FB2D94B35900470645 /* libfaustwithllvm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD2BAE82D92214900E14323 /* libfaustwithllvm.a */; };
 		FAE763FF2D94B3BD00470645 /* FaustSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FAE763FE2D94B3BD00470645 /* FaustSwiftUI */; };
 		FAF395602D9041AF00F7F2D4 /* QLFAUSTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FA868A4E2D873A1000B7176F /* QLFAUSTExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA175EB32D9FCA4B0044A6B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA175EAE2D9FCA3F0044A6B6 /* libFAUSTWithLLVMDownloader.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A44542562C34A83AC70CE05;
+			remoteInfo = ALL_BUILD;
+		};
 		FA868A2E2D8739F900B7176F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA868A142D8739F800B7176F /* Project object */;
@@ -84,6 +92,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA175EAE2D9FCA3F0044A6B6 /* libFAUSTWithLLVMDownloader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libFAUSTWithLLVMDownloader.xcodeproj; path = ImportLibrary/Xcode/libFAUSTWithLLVMDownloader.xcodeproj; sourceTree = "<group>"; };
+		FA175EB52D9FCB730044A6B6 /* libfaustwithllvm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfaustwithllvm.a; path = "ImportLibrary/Faust-2.79.3/lib/libfaustwithllvm.a"; sourceTree = "<group>"; };
 		FA20867A2D9226EB00A0CC4C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FA3F31EB2D90D87F009D7DAA /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		FA868A1C2D8739F800B7176F /* QLFAUST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLFAUST.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,167 +105,6 @@
 		FAA367272D90B2AE008F9FDD /* libFaustBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFaustBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3672B2D90B2D3008F9FDD /* FaustBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaustBridge.h; sourceTree = "<group>"; };
 		FAA3672C2D90B2D3008F9FDD /* FaustBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FaustBridge.mm; sourceTree = "<group>"; };
-		FAD2BA3D2D92214900E14323 /* AUUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUUI.h; sourceTree = "<group>"; };
-		FAD2BA3F2D92214900E14323 /* alsa-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "alsa-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA402D92214900E14323 /* android-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "android-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA412D92214900E14323 /* audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audio.h; sourceTree = "<group>"; };
-		FAD2BA422D92214900E14323 /* channels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = channels.h; sourceTree = "<group>"; };
-		FAD2BA432D92214900E14323 /* coreaudio-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coreaudio-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA442D92214900E14323 /* coreaudio-ios-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coreaudio-ios-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA452D92214900E14323 /* dummy-audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dummy-audio.h"; sourceTree = "<group>"; };
-		FAD2BA462D92214900E14323 /* esp32-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "esp32-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA472D92214900E14323 /* fpe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fpe.h; sourceTree = "<group>"; };
-		FAD2BA482D92214900E14323 /* jack-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jack-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA492D92214900E14323 /* juce-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "juce-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA4A2D92214900E14323 /* miniaudio-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "miniaudio-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA4B2D92214900E14323 /* netjack-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "netjack-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA4C2D92214900E14323 /* oboe-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "oboe-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA4D2D92214900E14323 /* ofaudio-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ofaudio-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA4E2D92214900E14323 /* opensles-android-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "opensles-android-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA4F2D92214900E14323 /* osc-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "osc-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA502D92214900E14323 /* portaudio-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "portaudio-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA512D92214900E14323 /* rtaudio-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rtaudio-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA522D92214900E14323 /* samAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = samAudio.h; sourceTree = "<group>"; };
-		FAD2BA532D92214900E14323 /* teensy-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "teensy-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA552D92214900E14323 /* cmajor-cpp-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cmajor-cpp-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA562D92214900E14323 /* cmajorpatch-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cmajorpatch-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA572D92214900E14323 /* cpp-dsp-adapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cpp-dsp-adapter.h"; sourceTree = "<group>"; };
-		FAD2BA582D92214900E14323 /* dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dsp.h; sourceTree = "<group>"; };
-		FAD2BA592D92214900E14323 /* dsp-adapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-adapter.h"; sourceTree = "<group>"; };
-		FAD2BA5A2D92214900E14323 /* dsp-bench.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-bench.h"; sourceTree = "<group>"; };
-		FAD2BA5B2D92214900E14323 /* dsp-checker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-checker.h"; sourceTree = "<group>"; };
-		FAD2BA5C2D92214900E14323 /* dsp-combiner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-combiner.h"; sourceTree = "<group>"; };
-		FAD2BA5D2D92214900E14323 /* dsp-compute-adapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-compute-adapter.h"; sourceTree = "<group>"; };
-		FAD2BA5E2D92214900E14323 /* dsp-multi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-multi.h"; sourceTree = "<group>"; };
-		FAD2BA5F2D92214900E14323 /* dsp-multifun.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-multifun.h"; sourceTree = "<group>"; };
-		FAD2BA602D92214900E14323 /* dsp-optimizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-optimizer.h"; sourceTree = "<group>"; };
-		FAD2BA612D92214900E14323 /* dsp-tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dsp-tools.h"; sourceTree = "<group>"; };
-		FAD2BA622D92214900E14323 /* fastmath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fastmath.cpp; sourceTree = "<group>"; };
-		FAD2BA632D92214900E14323 /* faust-dynamic-engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "faust-dynamic-engine.h"; sourceTree = "<group>"; };
-		FAD2BA642D92214900E14323 /* faust-dynamic-engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "faust-dynamic-engine.cpp"; sourceTree = "<group>"; };
-		FAD2BA652D92214900E14323 /* faust-engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "faust-engine.h"; sourceTree = "<group>"; };
-		FAD2BA662D92214900E14323 /* faust-poly-engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "faust-poly-engine.h"; sourceTree = "<group>"; };
-		FAD2BA672D92214900E14323 /* fixed-point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fixed-point.h"; sourceTree = "<group>"; };
-		FAD2BA682D92214900E14323 /* interpreter-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "interpreter-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA692D92214900E14323 /* interpreter-dsp-c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "interpreter-dsp-c.h"; sourceTree = "<group>"; };
-		FAD2BA6A2D92214900E14323 /* interpreter-machine-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "interpreter-machine-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA6B2D92214900E14323 /* libfaust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libfaust.h; sourceTree = "<group>"; };
-		FAD2BA6C2D92214900E14323 /* libfaust-box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libfaust-box.h"; sourceTree = "<group>"; };
-		FAD2BA6D2D92214900E14323 /* libfaust-box-c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libfaust-box-c.h"; sourceTree = "<group>"; };
-		FAD2BA6E2D92214900E14323 /* libfaust-c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libfaust-c.h"; sourceTree = "<group>"; };
-		FAD2BA6F2D92214900E14323 /* libfaust-signal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libfaust-signal.h"; sourceTree = "<group>"; };
-		FAD2BA702D92214900E14323 /* libfaust-signal-c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libfaust-signal-c.h"; sourceTree = "<group>"; };
-		FAD2BA712D92214900E14323 /* llvm-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "llvm-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA722D92214900E14323 /* llvm-dsp-adapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "llvm-dsp-adapter.h"; sourceTree = "<group>"; };
-		FAD2BA732D92214900E14323 /* llvm-dsp-adapter1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "llvm-dsp-adapter1.h"; sourceTree = "<group>"; };
-		FAD2BA742D92214900E14323 /* llvm-dsp-c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "llvm-dsp-c.h"; sourceTree = "<group>"; };
-		FAD2BA752D92214900E14323 /* llvm-machine-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "llvm-machine-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA762D92214900E14323 /* poly-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poly-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA772D92214900E14323 /* poly-interpreter-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poly-interpreter-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA782D92214900E14323 /* poly-llvm-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poly-llvm-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA792D92214900E14323 /* poly-wasm-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poly-wasm-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA7A2D92214900E14323 /* proxy-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "proxy-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA7B2D92214900E14323 /* proxy-osc-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "proxy-osc-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA7C2D92214900E14323 /* rnbo-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rnbo-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA7D2D92214900E14323 /* signal-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "signal-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA7E2D92214900E14323 /* sound-player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sound-player.h"; sourceTree = "<group>"; };
-		FAD2BA7F2D92214900E14323 /* timed-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "timed-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA802D92214900E14323 /* wasm-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wasm-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA812D92214900E14323 /* wasm-dsp-imp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wasm-dsp-imp.h"; sourceTree = "<group>"; };
-		FAD2BA822D92214900E14323 /* ysfx-dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ysfx-dsp.h"; sourceTree = "<group>"; };
-		FAD2BA842D92214900E14323 /* Blue.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = Blue.qrc; sourceTree = "<group>"; };
-		FAD2BA852D92214900E14323 /* Blue.qss */ = {isa = PBXFileReference; lastKnownFileType = text; path = Blue.qss; sourceTree = "<group>"; };
-		FAD2BA862D92214900E14323 /* Default.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = Default.qrc; sourceTree = "<group>"; };
-		FAD2BA872D92214900E14323 /* Default.qss */ = {isa = PBXFileReference; lastKnownFileType = text; path = Default.qss; sourceTree = "<group>"; };
-		FAD2BA882D92214900E14323 /* Grey.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = Grey.qrc; sourceTree = "<group>"; };
-		FAD2BA892D92214900E14323 /* Grey.qss */ = {isa = PBXFileReference; lastKnownFileType = text; path = Grey.qss; sourceTree = "<group>"; };
-		FAD2BA8A2D92214900E14323 /* Salmon.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; path = Salmon.qrc; sourceTree = "<group>"; };
-		FAD2BA8B2D92214900E14323 /* Salmon.qss */ = {isa = PBXFileReference; lastKnownFileType = text; path = Salmon.qss; sourceTree = "<group>"; };
-		FAD2BA8D2D92214900E14323 /* APIUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIUI.h; sourceTree = "<group>"; };
-		FAD2BA8E2D92214900E14323 /* BelaOSCUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BelaOSCUI.h; sourceTree = "<group>"; };
-		FAD2BA8F2D92214900E14323 /* CGlue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGlue.h; sourceTree = "<group>"; };
-		FAD2BA902D92214900E14323 /* CInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CInterface.h; sourceTree = "<group>"; };
-		FAD2BA912D92214900E14323 /* console.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = console.h; sourceTree = "<group>"; };
-		FAD2BA922D92214900E14323 /* ControlSequenceUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlSequenceUI.h; sourceTree = "<group>"; };
-		FAD2BA932D92214900E14323 /* ControlUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlUI.h; sourceTree = "<group>"; };
-		FAD2BA942D92214900E14323 /* DaisyControlUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaisyControlUI.h; sourceTree = "<group>"; };
-		FAD2BA952D92214900E14323 /* DecoratorUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorUI.h; sourceTree = "<group>"; };
-		FAD2BA962D92214900E14323 /* Esp32ControlUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Esp32ControlUI.h; sourceTree = "<group>"; };
-		FAD2BA972D92214900E14323 /* Esp32Reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Esp32Reader.h; sourceTree = "<group>"; };
-		FAD2BA982D92214900E14323 /* Esp32SensorUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Esp32SensorUI.h; sourceTree = "<group>"; };
-		FAD2BA992D92214900E14323 /* FUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FUI.h; sourceTree = "<group>"; };
-		FAD2BA9A2D92214900E14323 /* GTKUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTKUI.h; sourceTree = "<group>"; };
-		FAD2BA9B2D92214900E14323 /* GUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUI.h; sourceTree = "<group>"; };
-		FAD2BA9C2D92214900E14323 /* HothouseControlUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HothouseControlUI.h; sourceTree = "<group>"; };
-		FAD2BA9D2D92214900E14323 /* HTTPDControler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPDControler.h; sourceTree = "<group>"; };
-		FAD2BA9E2D92214900E14323 /* httpdUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = httpdUI.h; sourceTree = "<group>"; };
-		FAD2BA9F2D92214900E14323 /* JSONControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONControl.h; sourceTree = "<group>"; };
-		FAD2BAA02D92214900E14323 /* jsonfaustui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jsonfaustui.h; sourceTree = "<group>"; };
-		FAD2BAA12D92214900E14323 /* JSONUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONUI.h; sourceTree = "<group>"; };
-		FAD2BAA22D92214900E14323 /* JSONUIDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONUIDecoder.h; sourceTree = "<group>"; };
-		FAD2BAA32D92214900E14323 /* JuceGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JuceGUI.h; sourceTree = "<group>"; };
-		FAD2BAA42D92214900E14323 /* JuceOSCUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JuceOSCUI.h; sourceTree = "<group>"; };
-		FAD2BAA52D92214900E14323 /* JuceParameterUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JuceParameterUI.h; sourceTree = "<group>"; };
-		FAD2BAA62D92214900E14323 /* JuceReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JuceReader.h; sourceTree = "<group>"; };
-		FAD2BAA72D92214900E14323 /* JuceStateUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JuceStateUI.h; sourceTree = "<group>"; };
-		FAD2BAA82D92214900E14323 /* LayoutUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutUI.h; sourceTree = "<group>"; };
-		FAD2BAA92D92214900E14323 /* LibsndfileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibsndfileReader.h; sourceTree = "<group>"; };
-		FAD2BAAA2D92214900E14323 /* MapUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapUI.h; sourceTree = "<group>"; };
-		FAD2BAAB2D92214900E14323 /* MemoryReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryReader.h; sourceTree = "<group>"; };
-		FAD2BAAC2D92214900E14323 /* meta.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = meta.h; sourceTree = "<group>"; };
-		FAD2BAAD2D92214900E14323 /* MetaDataUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetaDataUI.h; sourceTree = "<group>"; };
-		FAD2BAAE2D92214900E14323 /* MidiUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidiUI.h; sourceTree = "<group>"; };
-		FAD2BAAF2D92214900E14323 /* MiniaudioReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiniaudioReader.h; sourceTree = "<group>"; };
-		FAD2BAB02D92214900E14323 /* mspUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mspUI.h; sourceTree = "<group>"; };
-		FAD2BAB12D92214900E14323 /* OCVUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVUI.h; sourceTree = "<group>"; };
-		FAD2BAB22D92214900E14323 /* OSCControler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCControler.h; sourceTree = "<group>"; };
-		FAD2BAB32D92214900E14323 /* OSCIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCIO.h; sourceTree = "<group>"; };
-		FAD2BAB42D92214900E14323 /* OSCUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCUI.h; sourceTree = "<group>"; };
-		FAD2BAB52D92214900E14323 /* PathBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathBuilder.h; sourceTree = "<group>"; };
-		FAD2BAB62D92214900E14323 /* PresetUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresetUI.h; sourceTree = "<group>"; };
-		FAD2BAB72D92214900E14323 /* PrintCUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintCUI.h; sourceTree = "<group>"; };
-		FAD2BAB82D92214900E14323 /* PrintUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintUI.h; sourceTree = "<group>"; };
-		FAD2BAB92D92214900E14323 /* qrcodegen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qrcodegen.h; sourceTree = "<group>"; };
-		FAD2BABA2D92214900E14323 /* qrcodegen.impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qrcodegen.impl.h; sourceTree = "<group>"; };
-		FAD2BABB2D92214900E14323 /* QTUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTUI.h; sourceTree = "<group>"; };
-		FAD2BABC2D92214900E14323 /* ring-buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ring-buffer.h"; sourceTree = "<group>"; };
-		FAD2BABD2D92214900E14323 /* RosCI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RosCI.h; sourceTree = "<group>"; };
-		FAD2BABE2D92214900E14323 /* RosUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RosUI.h; sourceTree = "<group>"; };
-		FAD2BABF2D92214900E14323 /* SaveUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveUI.h; sourceTree = "<group>"; };
-		FAD2BAC02D92214900E14323 /* SimpleParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleParser.h; sourceTree = "<group>"; };
-		FAD2BAC12D92214900E14323 /* Soundfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Soundfile.h; sourceTree = "<group>"; };
-		FAD2BAC22D92214900E14323 /* SoundUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundUI.h; sourceTree = "<group>"; };
-		FAD2BAC32D92214900E14323 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
-		FAD2BAC42D92214900E14323 /* ValueConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValueConverter.h; sourceTree = "<group>"; };
-		FAD2BAC52D92214900E14323 /* WaveReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveReader.h; sourceTree = "<group>"; };
-		FAD2BAC72D92214900E14323 /* bela-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bela-midi.h"; sourceTree = "<group>"; };
-		FAD2BAC82D92214900E14323 /* daisy-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "daisy-midi.h"; sourceTree = "<group>"; };
-		FAD2BAC92D92214900E14323 /* esp32-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "esp32-midi.h"; sourceTree = "<group>"; };
-		FAD2BACA2D92214900E14323 /* gramophone-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gramophone-midi.h"; sourceTree = "<group>"; };
-		FAD2BACB2D92214900E14323 /* iplug2-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iplug2-midi.h"; sourceTree = "<group>"; };
-		FAD2BACC2D92214900E14323 /* jack-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jack-midi.h"; sourceTree = "<group>"; };
-		FAD2BACD2D92214900E14323 /* juce-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "juce-midi.h"; sourceTree = "<group>"; };
-		FAD2BACE2D92214900E14323 /* midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = midi.h; sourceTree = "<group>"; };
-		FAD2BACF2D92214900E14323 /* rt-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rt-midi.h"; sourceTree = "<group>"; };
-		FAD2BAD02D92214900E14323 /* RtMidi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RtMidi.h; sourceTree = "<group>"; };
-		FAD2BAD12D92214900E14323 /* RtMidi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RtMidi.cpp; sourceTree = "<group>"; };
-		FAD2BAD22D92214900E14323 /* teensy-midi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "teensy-midi.h"; sourceTree = "<group>"; };
-		FAD2BAD42D92214900E14323 /* FaustFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaustFactory.h; sourceTree = "<group>"; };
-		FAD2BAD52D92214900E14323 /* FaustNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaustNode.h; sourceTree = "<group>"; };
-		FAD2BAD62D92214900E14323 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		FAD2BAD72D92214900E14323 /* MessageDriven.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageDriven.h; sourceTree = "<group>"; };
-		FAD2BAD82D92214900E14323 /* MessageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageProcessor.h; sourceTree = "<group>"; };
-		FAD2BAD92D92214900E14323 /* RootNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNode.h; sourceTree = "<group>"; };
-		FAD2BADA2D92214900E14323 /* smartpointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smartpointer.h; sourceTree = "<group>"; };
-		FAD2BADC2D92214900E14323 /* AudioPluginInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPluginInterface.h; sourceTree = "<group>"; };
-		FAD2BADE2D92214900E14323 /* faust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faust.h; sourceTree = "<group>"; };
-		FAD2BADF2D92214900E14323 /* voice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = voice.h; sourceTree = "<group>"; };
-		FAD2BAE02D92214900E14323 /* vstui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vstui.h; sourceTree = "<group>"; };
-		FAD2BAE22D92214900E14323 /* export.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = export.h; sourceTree = "<group>"; };
-		FAD2BAE32D92214900E14323 /* miniaudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = miniaudio.h; sourceTree = "<group>"; };
-		FAD2BAE42D92214900E14323 /* misc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
-		FAD2BAE52D92214900E14323 /* sound-file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sound-file.h"; sourceTree = "<group>"; };
-		FAD2BAE82D92214900E14323 /* libfaustwithllvm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfaustwithllvm.a; sourceTree = "<group>"; };
 		FAE763E52D94B30500470645 /* FAUSTViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAUSTViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -332,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA175EB62D9FCB730044A6B6 /* libfaustwithllvm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +208,7 @@
 				FA868A512D873A1000B7176F /* Quartz.framework in Frameworks */,
 				FA9FB77E2D91BD9600DAEEF4 /* FaustSwiftUI in Frameworks */,
 				FA3BEEE02D91C27400E77A67 /* QLFAUST_UI in Frameworks */,
-				FAD2BAEB2D92215000E14323 /* libfaustwithllvm.a in Frameworks */,
+				FA175EB82D9FCB730044A6B6 /* libfaustwithllvm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,20 +225,28 @@
 			files = (
 				FAE763FA2D94B35700470645 /* libFaustBridge.a in Frameworks */,
 				FAE763F92D94B34C00470645 /* QLFAUST_UI in Frameworks */,
+				FA175EB72D9FCB730044A6B6 /* libfaustwithllvm.a in Frameworks */,
 				FAE763FF2D94B3BD00470645 /* FaustSwiftUI in Frameworks */,
-				FAE763FB2D94B35900470645 /* libfaustwithllvm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA175EAF2D9FCA3F0044A6B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FA868A132D8739F800B7176F = {
 			isa = PBXGroup;
 			children = (
+				FA175EB52D9FCB730044A6B6 /* libfaustwithllvm.a */,
+				FA175EAE2D9FCA3F0044A6B6 /* libFAUSTWithLLVMDownloader.xcodeproj */,
 				FA20867A2D9226EB00A0CC4C /* README.md */,
 				FA8DEB272D9B04EE00DF4E86 /* faustlibraries */,
-				FAD2BAEA2D92214900E14323 /* Faust-2.79.3 */,
 				FA3F31EB2D90D87F009D7DAA /* BridgingHeader.h */,
 				FAA3672F2D90B2D3008F9FDD /* FaustBridge */,
 				FA868A1E2D8739F800B7176F /* QLFAUST */,
@@ -427,270 +285,6 @@
 				FAA3672C2D90B2D3008F9FDD /* FaustBridge.mm */,
 			);
 			path = FaustBridge;
-			sourceTree = "<group>";
-		};
-		FAD2BA3E2D92214900E14323 /* au */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BA3D2D92214900E14323 /* AUUI.h */,
-			);
-			path = au;
-			sourceTree = "<group>";
-		};
-		FAD2BA542D92214900E14323 /* audio */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BA3F2D92214900E14323 /* alsa-dsp.h */,
-				FAD2BA402D92214900E14323 /* android-dsp.h */,
-				FAD2BA412D92214900E14323 /* audio.h */,
-				FAD2BA422D92214900E14323 /* channels.h */,
-				FAD2BA432D92214900E14323 /* coreaudio-dsp.h */,
-				FAD2BA442D92214900E14323 /* coreaudio-ios-dsp.h */,
-				FAD2BA452D92214900E14323 /* dummy-audio.h */,
-				FAD2BA462D92214900E14323 /* esp32-dsp.h */,
-				FAD2BA472D92214900E14323 /* fpe.h */,
-				FAD2BA482D92214900E14323 /* jack-dsp.h */,
-				FAD2BA492D92214900E14323 /* juce-dsp.h */,
-				FAD2BA4A2D92214900E14323 /* miniaudio-dsp.h */,
-				FAD2BA4B2D92214900E14323 /* netjack-dsp.h */,
-				FAD2BA4C2D92214900E14323 /* oboe-dsp.h */,
-				FAD2BA4D2D92214900E14323 /* ofaudio-dsp.h */,
-				FAD2BA4E2D92214900E14323 /* opensles-android-dsp.h */,
-				FAD2BA4F2D92214900E14323 /* osc-dsp.h */,
-				FAD2BA502D92214900E14323 /* portaudio-dsp.h */,
-				FAD2BA512D92214900E14323 /* rtaudio-dsp.h */,
-				FAD2BA522D92214900E14323 /* samAudio.h */,
-				FAD2BA532D92214900E14323 /* teensy-dsp.h */,
-			);
-			path = audio;
-			sourceTree = "<group>";
-		};
-		FAD2BA832D92214900E14323 /* dsp */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BA552D92214900E14323 /* cmajor-cpp-dsp.h */,
-				FAD2BA562D92214900E14323 /* cmajorpatch-dsp.h */,
-				FAD2BA572D92214900E14323 /* cpp-dsp-adapter.h */,
-				FAD2BA582D92214900E14323 /* dsp.h */,
-				FAD2BA592D92214900E14323 /* dsp-adapter.h */,
-				FAD2BA5A2D92214900E14323 /* dsp-bench.h */,
-				FAD2BA5B2D92214900E14323 /* dsp-checker.h */,
-				FAD2BA5C2D92214900E14323 /* dsp-combiner.h */,
-				FAD2BA5D2D92214900E14323 /* dsp-compute-adapter.h */,
-				FAD2BA5E2D92214900E14323 /* dsp-multi.h */,
-				FAD2BA5F2D92214900E14323 /* dsp-multifun.h */,
-				FAD2BA602D92214900E14323 /* dsp-optimizer.h */,
-				FAD2BA612D92214900E14323 /* dsp-tools.h */,
-				FAD2BA622D92214900E14323 /* fastmath.cpp */,
-				FAD2BA632D92214900E14323 /* faust-dynamic-engine.h */,
-				FAD2BA642D92214900E14323 /* faust-dynamic-engine.cpp */,
-				FAD2BA652D92214900E14323 /* faust-engine.h */,
-				FAD2BA662D92214900E14323 /* faust-poly-engine.h */,
-				FAD2BA672D92214900E14323 /* fixed-point.h */,
-				FAD2BA682D92214900E14323 /* interpreter-dsp.h */,
-				FAD2BA692D92214900E14323 /* interpreter-dsp-c.h */,
-				FAD2BA6A2D92214900E14323 /* interpreter-machine-dsp.h */,
-				FAD2BA6B2D92214900E14323 /* libfaust.h */,
-				FAD2BA6C2D92214900E14323 /* libfaust-box.h */,
-				FAD2BA6D2D92214900E14323 /* libfaust-box-c.h */,
-				FAD2BA6E2D92214900E14323 /* libfaust-c.h */,
-				FAD2BA6F2D92214900E14323 /* libfaust-signal.h */,
-				FAD2BA702D92214900E14323 /* libfaust-signal-c.h */,
-				FAD2BA712D92214900E14323 /* llvm-dsp.h */,
-				FAD2BA722D92214900E14323 /* llvm-dsp-adapter.h */,
-				FAD2BA732D92214900E14323 /* llvm-dsp-adapter1.h */,
-				FAD2BA742D92214900E14323 /* llvm-dsp-c.h */,
-				FAD2BA752D92214900E14323 /* llvm-machine-dsp.h */,
-				FAD2BA762D92214900E14323 /* poly-dsp.h */,
-				FAD2BA772D92214900E14323 /* poly-interpreter-dsp.h */,
-				FAD2BA782D92214900E14323 /* poly-llvm-dsp.h */,
-				FAD2BA792D92214900E14323 /* poly-wasm-dsp.h */,
-				FAD2BA7A2D92214900E14323 /* proxy-dsp.h */,
-				FAD2BA7B2D92214900E14323 /* proxy-osc-dsp.h */,
-				FAD2BA7C2D92214900E14323 /* rnbo-dsp.h */,
-				FAD2BA7D2D92214900E14323 /* signal-dsp.h */,
-				FAD2BA7E2D92214900E14323 /* sound-player.h */,
-				FAD2BA7F2D92214900E14323 /* timed-dsp.h */,
-				FAD2BA802D92214900E14323 /* wasm-dsp.h */,
-				FAD2BA812D92214900E14323 /* wasm-dsp-imp.h */,
-				FAD2BA822D92214900E14323 /* ysfx-dsp.h */,
-			);
-			path = dsp;
-			sourceTree = "<group>";
-		};
-		FAD2BA8C2D92214900E14323 /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BA842D92214900E14323 /* Blue.qrc */,
-				FAD2BA852D92214900E14323 /* Blue.qss */,
-				FAD2BA862D92214900E14323 /* Default.qrc */,
-				FAD2BA872D92214900E14323 /* Default.qss */,
-				FAD2BA882D92214900E14323 /* Grey.qrc */,
-				FAD2BA892D92214900E14323 /* Grey.qss */,
-				FAD2BA8A2D92214900E14323 /* Salmon.qrc */,
-				FAD2BA8B2D92214900E14323 /* Salmon.qss */,
-			);
-			path = Styles;
-			sourceTree = "<group>";
-		};
-		FAD2BAC62D92214900E14323 /* gui */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BA8C2D92214900E14323 /* Styles */,
-				FAD2BA8D2D92214900E14323 /* APIUI.h */,
-				FAD2BA8E2D92214900E14323 /* BelaOSCUI.h */,
-				FAD2BA8F2D92214900E14323 /* CGlue.h */,
-				FAD2BA902D92214900E14323 /* CInterface.h */,
-				FAD2BA912D92214900E14323 /* console.h */,
-				FAD2BA922D92214900E14323 /* ControlSequenceUI.h */,
-				FAD2BA932D92214900E14323 /* ControlUI.h */,
-				FAD2BA942D92214900E14323 /* DaisyControlUI.h */,
-				FAD2BA952D92214900E14323 /* DecoratorUI.h */,
-				FAD2BA962D92214900E14323 /* Esp32ControlUI.h */,
-				FAD2BA972D92214900E14323 /* Esp32Reader.h */,
-				FAD2BA982D92214900E14323 /* Esp32SensorUI.h */,
-				FAD2BA992D92214900E14323 /* FUI.h */,
-				FAD2BA9A2D92214900E14323 /* GTKUI.h */,
-				FAD2BA9B2D92214900E14323 /* GUI.h */,
-				FAD2BA9C2D92214900E14323 /* HothouseControlUI.h */,
-				FAD2BA9D2D92214900E14323 /* HTTPDControler.h */,
-				FAD2BA9E2D92214900E14323 /* httpdUI.h */,
-				FAD2BA9F2D92214900E14323 /* JSONControl.h */,
-				FAD2BAA02D92214900E14323 /* jsonfaustui.h */,
-				FAD2BAA12D92214900E14323 /* JSONUI.h */,
-				FAD2BAA22D92214900E14323 /* JSONUIDecoder.h */,
-				FAD2BAA32D92214900E14323 /* JuceGUI.h */,
-				FAD2BAA42D92214900E14323 /* JuceOSCUI.h */,
-				FAD2BAA52D92214900E14323 /* JuceParameterUI.h */,
-				FAD2BAA62D92214900E14323 /* JuceReader.h */,
-				FAD2BAA72D92214900E14323 /* JuceStateUI.h */,
-				FAD2BAA82D92214900E14323 /* LayoutUI.h */,
-				FAD2BAA92D92214900E14323 /* LibsndfileReader.h */,
-				FAD2BAAA2D92214900E14323 /* MapUI.h */,
-				FAD2BAAB2D92214900E14323 /* MemoryReader.h */,
-				FAD2BAAC2D92214900E14323 /* meta.h */,
-				FAD2BAAD2D92214900E14323 /* MetaDataUI.h */,
-				FAD2BAAE2D92214900E14323 /* MidiUI.h */,
-				FAD2BAAF2D92214900E14323 /* MiniaudioReader.h */,
-				FAD2BAB02D92214900E14323 /* mspUI.h */,
-				FAD2BAB12D92214900E14323 /* OCVUI.h */,
-				FAD2BAB22D92214900E14323 /* OSCControler.h */,
-				FAD2BAB32D92214900E14323 /* OSCIO.h */,
-				FAD2BAB42D92214900E14323 /* OSCUI.h */,
-				FAD2BAB52D92214900E14323 /* PathBuilder.h */,
-				FAD2BAB62D92214900E14323 /* PresetUI.h */,
-				FAD2BAB72D92214900E14323 /* PrintCUI.h */,
-				FAD2BAB82D92214900E14323 /* PrintUI.h */,
-				FAD2BAB92D92214900E14323 /* qrcodegen.h */,
-				FAD2BABA2D92214900E14323 /* qrcodegen.impl.h */,
-				FAD2BABB2D92214900E14323 /* QTUI.h */,
-				FAD2BABC2D92214900E14323 /* ring-buffer.h */,
-				FAD2BABD2D92214900E14323 /* RosCI.h */,
-				FAD2BABE2D92214900E14323 /* RosUI.h */,
-				FAD2BABF2D92214900E14323 /* SaveUI.h */,
-				FAD2BAC02D92214900E14323 /* SimpleParser.h */,
-				FAD2BAC12D92214900E14323 /* Soundfile.h */,
-				FAD2BAC22D92214900E14323 /* SoundUI.h */,
-				FAD2BAC32D92214900E14323 /* UI.h */,
-				FAD2BAC42D92214900E14323 /* ValueConverter.h */,
-				FAD2BAC52D92214900E14323 /* WaveReader.h */,
-			);
-			path = gui;
-			sourceTree = "<group>";
-		};
-		FAD2BAD32D92214900E14323 /* midi */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BAC72D92214900E14323 /* bela-midi.h */,
-				FAD2BAC82D92214900E14323 /* daisy-midi.h */,
-				FAD2BAC92D92214900E14323 /* esp32-midi.h */,
-				FAD2BACA2D92214900E14323 /* gramophone-midi.h */,
-				FAD2BACB2D92214900E14323 /* iplug2-midi.h */,
-				FAD2BACC2D92214900E14323 /* jack-midi.h */,
-				FAD2BACD2D92214900E14323 /* juce-midi.h */,
-				FAD2BACE2D92214900E14323 /* midi.h */,
-				FAD2BACF2D92214900E14323 /* rt-midi.h */,
-				FAD2BAD02D92214900E14323 /* RtMidi.h */,
-				FAD2BAD12D92214900E14323 /* RtMidi.cpp */,
-				FAD2BAD22D92214900E14323 /* teensy-midi.h */,
-			);
-			path = midi;
-			sourceTree = "<group>";
-		};
-		FAD2BADB2D92214900E14323 /* osc */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BAD42D92214900E14323 /* FaustFactory.h */,
-				FAD2BAD52D92214900E14323 /* FaustNode.h */,
-				FAD2BAD62D92214900E14323 /* Message.h */,
-				FAD2BAD72D92214900E14323 /* MessageDriven.h */,
-				FAD2BAD82D92214900E14323 /* MessageProcessor.h */,
-				FAD2BAD92D92214900E14323 /* RootNode.h */,
-				FAD2BADA2D92214900E14323 /* smartpointer.h */,
-			);
-			path = osc;
-			sourceTree = "<group>";
-		};
-		FAD2BADD2D92214900E14323 /* unity */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BADC2D92214900E14323 /* AudioPluginInterface.h */,
-			);
-			path = unity;
-			sourceTree = "<group>";
-		};
-		FAD2BAE12D92214900E14323 /* vst */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BADE2D92214900E14323 /* faust.h */,
-				FAD2BADF2D92214900E14323 /* voice.h */,
-				FAD2BAE02D92214900E14323 /* vstui.h */,
-			);
-			path = vst;
-			sourceTree = "<group>";
-		};
-		FAD2BAE62D92214900E14323 /* faust */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BA3E2D92214900E14323 /* au */,
-				FAD2BA542D92214900E14323 /* audio */,
-				FAD2BA832D92214900E14323 /* dsp */,
-				FAD2BAC62D92214900E14323 /* gui */,
-				FAD2BAD32D92214900E14323 /* midi */,
-				FAD2BADB2D92214900E14323 /* osc */,
-				FAD2BADD2D92214900E14323 /* unity */,
-				FAD2BAE12D92214900E14323 /* vst */,
-				FAD2BAE22D92214900E14323 /* export.h */,
-				FAD2BAE32D92214900E14323 /* miniaudio.h */,
-				FAD2BAE42D92214900E14323 /* misc.h */,
-				FAD2BAE52D92214900E14323 /* sound-file.h */,
-			);
-			path = faust;
-			sourceTree = "<group>";
-		};
-		FAD2BAE72D92214900E14323 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BAE62D92214900E14323 /* faust */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		FAD2BAE92D92214900E14323 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BAE82D92214900E14323 /* libfaustwithllvm.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		FAD2BAEA2D92214900E14323 /* Faust-2.79.3 */ = {
-			isa = PBXGroup;
-			children = (
-				FAD2BAE72D92214900E14323 /* include */,
-				FAD2BAE92D92214900E14323 /* lib */,
-			);
-			path = "Faust-2.79.3";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -784,6 +378,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FA175EB42D9FCA4B0044A6B6 /* PBXTargetDependency */,
 				FAA3689D2D90BF24008F9FDD /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
@@ -890,6 +485,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FA868A1D2D8739F800B7176F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FA175EAF2D9FCA3F0044A6B6 /* Products */;
+					ProjectRef = FA175EAE2D9FCA3F0044A6B6 /* libFAUSTWithLLVMDownloader.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FAE763E42D94B30500470645 /* FAUSTViewer */,
@@ -989,6 +590,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FA175EB42D9FCA4B0044A6B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ALL_BUILD;
+			targetProxy = FA175EB32D9FCA4B0044A6B6 /* PBXContainerItemProxy */;
+		};
 		FA868A2F2D8739F900B7176F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA868A1B2D8739F800B7176F /* QLFAUST */;
@@ -1078,6 +684,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ImportLibrary/Faust-2.79.3/include";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/ImportLibrary/Faust-2.79.3/lib";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -1139,6 +747,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ImportLibrary/Faust-2.79.3/include";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/ImportLibrary/Faust-2.79.3/lib";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1170,10 +780,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.75.7/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.6;
@@ -1208,10 +814,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.75.7/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.6;
@@ -1267,10 +869,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 85478UQJJR;
 				GENERATE_INFOPLIST_FILE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.75.7/lib",
-				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST.HostUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1288,10 +886,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 85478UQJJR;
 				GENERATE_INFOPLIST_FILE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.75.7/lib",
-				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.QLFAUST.HostUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1320,10 +914,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.79.3/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.6;
@@ -1355,10 +945,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.79.3/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.6;
@@ -1434,10 +1020,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.79.3/lib",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexnadzharov.FAUSTViewer;
@@ -1467,10 +1049,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.79.3/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 0.0.6;
