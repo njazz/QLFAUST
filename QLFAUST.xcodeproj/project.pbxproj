@@ -964,14 +964,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85478UQJJR;
 				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "Faust-2.79.3/include";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.75.7/lib",
-					"$(PROJECT_DIR)/Faust-2.79.3-x64/lib",
-					"$(PROJECT_DIR)/Faust-2.79.3-arm64/lib",
-					"$(PROJECT_DIR)/Faust-2.79.3/lib",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -985,14 +977,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85478UQJJR;
 				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "Faust-2.79.3/include";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Faust-2.75.7/lib",
-					"$(PROJECT_DIR)/Faust-2.79.3-x64/lib",
-					"$(PROJECT_DIR)/Faust-2.79.3-arm64/lib",
-					"$(PROJECT_DIR)/Faust-2.79.3/lib",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
